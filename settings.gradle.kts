@@ -1,6 +1,8 @@
-rootProject.name = "kotlin-template"
+rootProject.name = "bootclassloader"
 
 pluginManagement.repositories {
     mavenLocal()
     gradlePluginPortal()
 }
+
+include("platform-jvm")

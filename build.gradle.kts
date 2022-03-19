@@ -8,6 +8,7 @@ plugins {
         // Language Plugins
         `java-library`
         kotlin("jvm") version KOTLIN
+        id("fr.stardustenterprises.rust.importer") version GRADLE_RUST
 
         // Git Repo Information
         id("org.ajoberstar.grgit") version GRGIT
@@ -39,7 +40,7 @@ val targetVersion = "1.8"
 // What JVM version this project is written in
 val sourceVersion = "1.8"
 // Should we generate an /api/ source set
-val apiSourceSet = true
+val apiSourceSet = false
 
 // Add `include` configuration for ShadowJar
 configurations {
@@ -60,12 +61,15 @@ repositories {
 
 // Project Dependencies
 dependencies {
-    val include by configurations
+    rust(project(":platform-jvm"))
 
     with(Dependencies) {
         kotlinModules.forEach {
             implementation("org.jetbrains.kotlin", "kotlin-$it", KOTLIN)
         }
+
+        implementation("fr.stardustenterprises", "yanl", YANL)
+
         testImplementation("org.jetbrains.kotlin", "kotlin-test", KOTLIN)
     }
 }
@@ -93,6 +97,9 @@ if (apiSourceSet) {
     }
 }
 
+// The latest commit ID
+val buildRevision: String = grgit.log()[0].id ?: "dev"
+
 // Disable unneeded rules
 ktlint {
     this.disabledRules.add("no-wildcard-imports")
@@ -103,6 +110,7 @@ blossom {
         "project.name" to Coordinates.NAME,
         "project.version" to Coordinates.VERSION,
         "project.desc" to Coordinates.DESC,
+        "project.rev" to buildRevision,
     ).mapKeys { "@${it.key}@" }.forEach { (key, value) ->
         replaceToken(key, value)
     }
@@ -188,7 +196,7 @@ tasks {
             "Created-By" to "$javaVersion ($javaVendor $javaVmVersion)",
             "Build-Date" to buildDate,
             "Build-Time" to buildTime,
-            "Build-Revision" to grgit.log()[0].id,
+            "Build-Revision" to buildRevision,
             "Specification-Title" to project.name,
             "Specification-Version" to normalizeVersion(project.version.toString()),
             "Specification-Vendor" to Coordinates.VENDOR,
@@ -259,7 +267,9 @@ tasks {
         this.archiveClassifier.set(if (ShadowJar.overrideJar) "" else "all")
         this.manifest.inheritFrom(jar.get().manifest)
 
-        ShadowJar.packageRemappings.forEach(this::relocate)
+        ShadowJar.packageRemappings.forEach { (key, value) ->
+            this.relocate(key, value)
+        }
     }
 }
 

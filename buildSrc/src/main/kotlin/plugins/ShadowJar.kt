@@ -5,7 +5,7 @@ object ShadowJar {
      * Should the shadow jar override the base jarfile
      * or be its own separate jar.
      */
-    const val overrideJar = false
+    const val overrideJar = true
 
     /**
      * Packages which should be moved
