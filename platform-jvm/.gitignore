@@ -22,7 +22,7 @@ build
 
 # cargo
 Cargo.lock
-target/
+target
 
 # other
 run
