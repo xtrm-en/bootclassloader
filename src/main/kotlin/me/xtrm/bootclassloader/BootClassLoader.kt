@@ -24,6 +24,9 @@ object BootClassLoader {
 
     private val proxyClassLoader = object : ClassLoader(null) {}
 
+    /**
+     * 
+     */
     val urls by lazy {
         val tempUrls = URLHolder(true)
         val classLoader = java.lang.String::class.java.classLoader
@@ -40,6 +43,15 @@ object BootClassLoader {
         tempUrls
     }
 
+    /**
+     * Defines a class on the Bootstrap [ClassLoader].
+     * 
+     * @param className The class name
+     * @param bytecode The classfile bytes
+     * @param offset The start offset in [bytecode] of the class data
+     * @param length The length in [bytecode] of the class
+     * @param protectionDomain The [ProtectionDomain] of the class
+     */
     fun defineClass(
         className: String,
         bytecode: ByteArray,
@@ -55,9 +67,25 @@ object BootClassLoader {
         protectionDomain,
     )
 
+    /**
+     * Finds the resource with the given name.
+     *
+     * @param name The resource name
+     *
+     * @return A [URL] object for reading the resource, or
+     *         `null` if the resource could not be found 
+     */
     fun getResource(name: String): URL? =
         this.proxyClassLoader.getResource(name)
 
+    /**
+     * Finds all the resources with the given name.
+     *
+     * @param name The resources name
+     *
+     * @return An enumeration of [URL] objects for the resource.
+     *         If no resources could be found, the enumeration will be empty.
+     */
     fun getResources(name: String): Enumeration<URL> =
         Collections.enumeration(
             this.proxyClassLoader.getResources(name).toList().mapNotNull { it }
@@ -81,7 +109,7 @@ object BootClassLoader {
         boot: Boolean,
     )
 
-    class URLHolder(private val boot: Boolean) : ArrayList<URL>() {
+    private class URLHolder(private val boot: Boolean) : ArrayList<URL>() {
         internal fun addSilent(element: URL): Boolean =
             super.add(element)
 
