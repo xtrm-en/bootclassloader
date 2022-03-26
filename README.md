@@ -3,7 +3,7 @@
 [![Build][badge-github-ci]][project-gradle-ci]
 [![Maven Central][badge-mvnc]][project-mvnc]
 
-interact with the [JVM][jvm]'s BootClassLoader in many useful (but hacky) ways.
+interact with the [JVM][jvm]'s Bootstrap ClassLoader in many useful (and sometimes hacky) ways.
 
 # importing
 
