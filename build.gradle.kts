@@ -69,6 +69,8 @@ dependencies {
         }
 
         implementation("fr.stardustenterprises", "yanl", YANL)
+        implementation("fr.stardustenterprises", "deface", DEFACE)
+        implementation("fr.stardustenterprises", "unsafe", UNSAFE)
 
         testImplementation("org.jetbrains.kotlin", "kotlin-test", KOTLIN)
     }
