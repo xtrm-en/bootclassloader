@@ -14,6 +14,8 @@ object Plugins {
 object Dependencies {
     const val KOTLIN = kotlinVersion
     const val YANL = "0.7.1"
+    const val DEFACE = "0.2.0"
+    const val UNSAFE = "1.7.3"
 
     val kotlinModules = arrayOf("stdlib")
 }
