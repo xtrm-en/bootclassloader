@@ -1,0 +1,23 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:me.xtrm.bootclassloader////PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/index.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder///PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/index.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder/URLHolder/#kotlin.Boolean/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/-u-r-l-holder.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder/add/#java.net.URL/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/add.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder/add/#kotlin.Int#java.net.URL/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/add.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder/addAll/#kotlin.Int#kotlin.collections.Collection[java.net.URL]/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/add-all.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder/addAll/#kotlin.collections.Collection[java.net.URL]/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/add-all.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder/remove/#java.net.URL/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/remove.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder/removeAll/#kotlin.collections.Collection[java.net.URL]/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/remove-all.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder/removeAt/#kotlin.Int/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/remove-at.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder/removeIf/#java.util.function.Predicate[java.net.URL]/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/remove-if.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder/replaceAll/#java.util.function.UnaryOperator[java.net.URL]/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/replace-all.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader.URLHolder/set/#kotlin.Int#java.net.URL/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/-u-r-l-holder/set.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader///PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/index.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader/defineClass/#kotlin.String#kotlin.ByteArray#kotlin.Int#kotlin.Int#java.security.ProtectionDomain?/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/define-class.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader/getResource/#kotlin.String/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/get-resource.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader/getResourceAsStream/#kotlin.String/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/get-resource-as-stream.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader/getResources/#kotlin.String/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/get-resources.html
+$dokka.location:me.xtrm.bootclassloader/BootClassLoader/urls/#/PointingToDeclaration/bootclassloader/me.xtrm.bootclassloader/-boot-class-loader/urls.html
+me.xtrm.bootclassloader
+
