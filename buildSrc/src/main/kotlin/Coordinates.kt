@@ -1,6 +1,6 @@
 object Coordinates {
     const val NAME = "bootclassloader"
-    const val DESC = "Interract with the JVM's BootClassLoader in many useful (but hacky) ways."
+    const val DESC = "Interact with the JVM's BootClassLoader in many useful (but hacky) ways."
     const val VENDOR = "xtrm"
 
     const val GIT_HOST = "github.com"
